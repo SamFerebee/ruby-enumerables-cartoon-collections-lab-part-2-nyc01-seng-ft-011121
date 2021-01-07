@@ -28,7 +28,7 @@ def find_valid_calls(planeteer_calls)
   if includes == false 
     return nil 
   end
-  found = valid_calls.each{|st| planeteer_calls.find(st)}.min
+  found = valid_calls.find{|st| planeteer_calls.include?(st)}
   found
   
 end
