@@ -28,7 +28,7 @@ def find_valid_calls(planeteer_calls)
   if includes == false 
     return nil 
   end
-  found = planeteer_calls.find{|st| st == "Earth!" || st == "Wind!" || st == "Fire!" || st == "Water!" || st == "Heart!"}
+  found = valid_calls.each{|st| planeteer_calls.find(st)}
   found
   
 end
